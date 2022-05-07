@@ -1,0 +1,48 @@
+POST http://localhost:5000/api/auth/register
+Content-Type:  application/json
+
+{
+    "username": "binh",
+    "password": "binh"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type:  application/json
+
+{
+    "username": "henry",
+    "password": "henry"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY2NWNjNGMwZGYxODk2OTgwMTE5YmEiLCJpYXQiOjE2NTA4NzU1ODh9.iPZ_xLXv3hcFSAPa1d2lgDP_IK3d7ro_AUVYMR18DkE
+
+{
+    "title": "react",
+    "description": "abc",
+    "url": "facebook.com"
+}
+
+###
+GET http://localhost:5000/api/posts
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY2NGM4YjhlNzIwM2Q2MGFjMjAyMzYiLCJpYXQiOjE2NTA4NzYxMTN9.iqh6IyAWz8BGtsmwBG576SP91ZFmsjm5DPIAWWncVSY
+
+
+###
+PUT http://localhost:5000/api/posts/6266584266d404beca91b34a
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY2NGM4YjhlNzIwM2Q2MGFjMjAyMzYiLCJpYXQiOjE2NTA4NzgxMDB9.eL5Zeb8SlOaI4PVEZO7RnCmJAaUg3cswCu4A3nsKSws
+
+{
+    "title": "react",
+    "description": "abc",
+    "url": "facebook.com"
+}
+
+###
+DELETE  http://localhost:5000/api/posts/6266584266d404beca91b34a
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjY2NGM4YjhlNzIwM2Q2MGFjMjAyMzYiLCJpYXQiOjE2NTA4Nzg4NTN9.ZDno8MmAuO6-vQVHKA_mDZetLrey44davOOvKy_mGz4
