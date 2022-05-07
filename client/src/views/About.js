@@ -8,7 +8,7 @@ const About = () =>{
                 <Button variant="primary"
                 href="https://www.facebook.com/profile.php?id=100011912614238"
                 size='lg'>
-                    Visit my channelfor more tutorials
+                    Visit my profile on Facebook
                 </Button>
             </Col>
         </Row>

@@ -47,15 +47,15 @@ const Dashboard = () => {
           <Card.Body>
             <Card.Header as="h1">Hi {username}</Card.Header>
 
-            <Card.Title>Welcome to LearnIt</Card.Title>
+            <Card.Title>Welcome to PhaPha</Card.Title>
             <Card.Text>
-              Click the button below to track your first skill to learn
+            Click the button below to track your first work to do
             </Card.Text>
             <Button
               variant="primary"
               onClick={setShowAddPostModal.bind(this, true)}
             >
-              LearnIt
+              DoIt
             </Button>
           </Card.Body>
         </Card>
@@ -74,7 +74,7 @@ const Dashboard = () => {
         {/* Open add post modal */}
         <OverlayTrigger
           placement="left"
-          overlay={<Tooltip>Add a new thing to learn</Tooltip>}
+          overlay={<Tooltip>Add a new thing to do</Tooltip>}
         >
           <Button
             className="btn-floating"

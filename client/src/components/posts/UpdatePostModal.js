@@ -30,10 +30,6 @@ const UpdatePostModal = () => {
     setShowUpdatePostModal(false);
     setShowToast({ show: true, message, type: success ? "success" : "danger" });
   };
-  //   const resetAddPostData = () => {
-  //     setNewPost({ title: "", description: "", url: "", status: "TO LEARN" });
-  //     setShowAddPostModal(false);
-  //   };
   return (
     <Modal show={showUpdatePostModal} onHide={closeDialog}>
       <Modal.Header closeButton>
@@ -81,9 +77,9 @@ const UpdatePostModal = () => {
               name="status"
               onChange={onChangeUpdatedPostForm}
             >
-              <option value="TO LEARN">TO LEARN</option>
-              <option value="LEARNING">LEARNING</option>
-              <option value="LEARNED">LEARNED</option>
+              <option value="TO DO">TO DO</option>
+              <option value="DOING">DOING</option>
+              <option value="DONE">DONE</option>
             </Form.Control>
           </Form.Group>
         </Modal.Body>
@@ -92,7 +88,7 @@ const UpdatePostModal = () => {
             Cancel
           </Button>
           <Button variant="primary" type="submit">
-            LearnIt
+            DoIt
           </Button>
         </Modal.Footer>
       </Form>

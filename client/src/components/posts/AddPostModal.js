@@ -12,7 +12,7 @@ const AddPostModal = () => {
     title: "",
     description: "",
     url: "",
-    status: "TO LEARN",
+    status: "TO DO",
   });
   const { title, description, url } = newPost;
   const onChangeNewPostForm = (event) =>
@@ -27,13 +27,13 @@ const AddPostModal = () => {
     setShowToast({show: true, message, type:success?'success':'danger'})
   };
   const resetAddPostData = () => {
-    setNewPost({ title: "", description: "", url: "", status: "TO LEARN" });
+    setNewPost({ title: "", description: "", url: "", status: "TO DO" });
     setShowAddPostModal(false);
   };
   return (
     <Modal show={showAddPostModal} onHide={closeDialog}>
       <Modal.Header closeButton>
-        <Modal.Title>What do you want to learn?</Modal.Title>
+        <Modal.Title>What do you want to do?</Modal.Title>
       </Modal.Header>
       <Form onSubmit={onSubmit}>
         <Modal.Body>
@@ -76,7 +76,7 @@ const AddPostModal = () => {
             Cancel
           </Button>
           <Button variant="primary" type="submit">
-            LearnIt
+            DoIt
           </Button>
         </Modal.Footer>
       </Form>

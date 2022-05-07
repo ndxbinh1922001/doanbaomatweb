@@ -41,14 +41,14 @@ router.post("/", verifyToken, async (req, res) => {
       title,
       description,
       url: url.startsWith("https://") ? url : `https://${url}`,
-      status: status || "TO LEARN",
+      status: status || "TO DO",
       user: req.userId,
     });
     await newPost.save();
 
     res.json({
       success: true,
-      message: "Happy learning!",
+      message: "Happy doing!",
       post: newPost,
     });
   } catch (error) {
@@ -76,7 +76,7 @@ router.put("/:id", verifyToken, async (req, res) => {
       title,
       description: description || "",
       url: (url.startsWith("https://") ? url : `https://${url}`) || "",
-      status: status || "TO LEARN",
+      status: status || "TO DO",
     };
     const postUpdateCondition = {
       _id: req.params.id,
