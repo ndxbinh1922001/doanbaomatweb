@@ -28,6 +28,8 @@ const Dashboard = () => {
     setShowAddPostModal,
     showToast: { show, message, type },
     setShowToast,
+    keywordSearch,
+    setKeywordSearch,
   } = useContext(PostContext);
   // Start: get all posts
   useEffect(() => {
@@ -49,7 +51,7 @@ const Dashboard = () => {
 
             <Card.Title>Welcome to PhaPha</Card.Title>
             <Card.Text>
-            Click the button below to track your first work to do
+              Click the button below to track your first work to do
             </Card.Text>
             <Button
               variant="primary"
@@ -65,11 +67,19 @@ const Dashboard = () => {
     body = (
       <>
         <Row className="row-cols-1 row-cols-md-3 g-4 mx-auto mt-3">
-          {posts.map((post) => (
-            <Col key={post._id} className="my-2">
-              <SinglePost post={post} />
-            </Col>
-          ))}
+          {posts.map((post) => {
+            console.log(keywordSearch);
+            if (
+              post.title.toLowerCase().indexOf(keywordSearch) !== -1 ||
+              post.description.toLowerCase().indexOf(keywordSearch) !== -1
+            )
+              return (
+                <Col key={post._id} className="my-2">
+                  <SinglePost post={post} />
+                </Col>
+              );
+            else return;
+          })}
         </Row>
         {/* Open add post modal */}
         <OverlayTrigger

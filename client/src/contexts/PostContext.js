@@ -22,7 +22,7 @@ const PostContextProvider = ({ children }) => {
 
   const [showAddPostModal, setShowAddPostModal] = useState(false);
   const [showUpdatePostModal, setShowUpdatePostModal] = useState(false);
-
+  const [keywordSearch, setKeywordSearch] = useState("");
   const [showToast, setShowToast] = useState({
     show: false,
     message: "",
@@ -107,6 +107,8 @@ const PostContextProvider = ({ children }) => {
     updatePost,
     showUpdatePostModal,
     setShowUpdatePostModal,
+    keywordSearch,
+    setKeywordSearch,
   };
 
   return (
